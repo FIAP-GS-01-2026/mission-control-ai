@@ -41,10 +41,10 @@ def demo_fontes():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Gerador de banner ASCII")
-    parser.add_argument("-fonts", action="store_true", help="Lista todas as fontes")
-    parser.add_argument("-font", type=str, help="Fonte específica para testar")
-    parser.add_argument("-text", type=str, default="Mission Control AI", help="Texto para o banner")
-    parser.add_argument("-demo", action="store_true", help="Demonstra 8 fontes")
+    parser.add_argument("--fonts", action="store_true", help="Lista todas as fontes")
+    parser.add_argument("--font", type=str, help="Fonte específica para testar")
+    parser.add_argument("--text", type=str, default="Mission Control AI", help="Texto para o banner")
+    parser.add_argument("--demo", action="store_true", help="Demonstra 8 fontes")
     args = parser.parse_args()
 
     if args.fonts:
