@@ -91,13 +91,12 @@ def avaliar(dados):
         "status_geral": _calcular_status(alertas)
     }
 
-
 def _calcular_status(alertas):
     """Calcula o status geral da missão baseado nos alertas."""
-    if any(a["nivel"] == "CRITICO" for a in alertas):
-        return "CRÍTICO"
     if any(a["nivel"] == "RESPOSTA_AUTOMATICA" for a in alertas):
         return "EMERGÊNCIA"
+    if any(a["nivel"] == "CRITICO" for a in alertas):
+        return "CRÍTICO"
     if any(a["nivel"] == "ATENCAO" for a in alertas):
         return "ATENÇÃO"
     return "NORMAL"
