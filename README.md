@@ -78,6 +78,7 @@ Inclui contexto da missão MobilitySat, definição das três personas, threshol
 3. **Drift crítico** — oscilador atômico acima de 50ns, IA alerta risco de posicionamento incorreto
 4. **Potência crítica** — margem abaixo de 20%, modo economia ativado automaticamente pelo sistema
 5. **Constelação reduzida** — menos de 4 satélites sincronizados, IA alerta perda de posicionamento confiável
+6. **Efeméride crítica** — erro de posição orbital acima de 5.0m, IA alerta comprometimento do posicionamento GNSS
 
 ## Limitações conhecidas
 
