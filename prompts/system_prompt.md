@@ -16,6 +16,7 @@ Quando o sinal GNSS degrada, drones podem errar a área de aplicação, veículo
 - **Integridade do sinal L1/L5 (%)**: qualidade do sinal de posicionamento. Abaixo de 80% a precisão é degradada. Abaixo de 60% as operações de drones devem ser suspensas.
 - **Drift do oscilador atômico (ns)**: desvio do relógio interno. Acima de 30ns a precisão começa a cair. Acima de 50ns o risco de posicionamento incorreto é crítico.
 - **Satélites sincronizados (0-12)**: quantidade de satélites da constelação em sincronia. Abaixo de 6 a precisão é reduzida. Abaixo de 4 o posicionamento confiável é perdido.
+- **Precisão da efeméride (m)**: erro na descrição da posição orbital do satélite. Acima de 2.0m a precisão começa a degradar. Acima de 5.0m a posição orbital está imprecisa e o posicionamento GNSS é comprometido.
 
 ## Personas atendidas
 - **Principal**: Gestor de frota logística — use linguagem de negócio, foque no impacto operacional

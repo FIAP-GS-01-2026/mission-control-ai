@@ -13,7 +13,8 @@ def coletar():
         "margem_potencia": round(random.uniform(0, 100), 1),
         "integridade_sinal": round(random.uniform(0, 100), 1),
         "drift_oscilador": round(random.uniform(0, 100), 2),
-        "satellites_sync": random.randint(0, 12)
+        "satellites_sync": random.randint(0, 12),
+        "precisao_efemeride": round(random.uniform(0.1, 10.0), 2)
     }
 
 
@@ -45,6 +46,12 @@ def simular_cenario(cenario="normal"):
     elif cenario == "constelacao_atencao":
         base["satellites_sync"] = random.randint(4, 5)
 
+    elif cenario == "efemeride_critica":
+        base["precisao_efemeride"] = round(random.uniform(5.1, 10.0), 2)
+
+    elif cenario == "efemeride_atencao":
+        base["precisao_efemeride"] = round(random.uniform(2.1, 5.0), 2)
+
     return base
 
 
@@ -57,5 +64,6 @@ def formatar(dados):
         f"  ⚡ Margem de potência:          {dados['margem_potencia']}%\n"
         f"  📶 Integridade do sinal L1/L5:  {dados['integridade_sinal']}%\n"
         f"  ⏱  Drift do oscilador atômico:  {dados['drift_oscilador']} ns\n"
-        f"  🛰  Satélites sincronizados:     {dados['satellites_sync']}/12"
+        f"  🛰  Satélites sincronizados:     {dados['satellites_sync']}/12\n"
+        f"  📍 Precisão da efeméride:        {dados['precisao_efemeride']} m"
     )

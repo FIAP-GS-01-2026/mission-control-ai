@@ -8,6 +8,8 @@ THRESHOLD_DRIFT_CRITICO = 50.0
 THRESHOLD_DRIFT_ATENCAO = 30.0
 THRESHOLD_SYNC_CRITICO = 4
 THRESHOLD_SYNC_ATENCAO = 6
+THRESHOLD_EFEMERIDE_CRITICO = 5.0
+THRESHOLD_EFEMERIDE_ATENCAO = 2.0
 
 
 def avaliar(dados):
@@ -81,6 +83,24 @@ def avaliar(dados):
             "valor": dados["satellites_sync"],
             "nivel": "ATENCAO",
             "mensagem": f"{dados['satellites_sync']} satélites — precisão reduzida, operar com cautela"
+        })
+
+    # Regra 8 — Precisão da efeméride crítica
+    if dados["precisao_efemeride"] > THRESHOLD_EFEMERIDE_CRITICO:
+        alertas.append({
+            "parametro": "Precisão da efeméride",
+            "valor": dados["precisao_efemeride"],
+            "nivel": "CRITICO",
+            "mensagem": f"Efeméride com erro de {dados['precisao_efemeride']}m — posição orbital imprecisa"
+        })
+
+    # Regra 9 — Precisão da efeméride em atenção
+    elif dados["precisao_efemeride"] > THRESHOLD_EFEMERIDE_ATENCAO:
+        alertas.append({
+            "parametro": "Precisão da efeméride",
+            "valor": dados["precisao_efemeride"],
+            "nivel": "ATENCAO",
+            "mensagem": f"Efeméride com erro de {dados['precisao_efemeride']}m — monitorar degradação"
         })
 
     return {
