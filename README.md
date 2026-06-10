@@ -107,6 +107,6 @@ SaaS — assinatura mensal pelo sistema de monitoramento e alerta de qualidade d
 
 ## 🎬 Vídeo de demonstração
 
-🔗 [Assistir demonstração no YouTube]()
+🔗 [Assistir demonstração no YouTube](https://www.youtube.com/watch?v=t3PlsHpMnXQ)
 
 > Configurado como "Não listado" no YouTube.
