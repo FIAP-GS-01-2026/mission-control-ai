@@ -1,4 +1,4 @@
-🚀 Mission Control AI — MobilitySat GNSS
+# 🚀 Mission Control AI — MobilitySat GNSS
 
 **Modalidade:** Trio
 
@@ -48,7 +48,9 @@ pip install -r requirements.txt
 ```
 
 4. Crie o arquivo `.env` na raiz com:
+```
 OLLAMA_API_KEY=sua_chave_aqui
+```
 
 5. Execute o sistema:
 ```bash
@@ -69,7 +71,7 @@ python3 main.py
 
 O system prompt completo está em [`prompts/system_prompt.md`](prompts/system_prompt.md).
 
-Inclui contexto da missão MobilitySat, definição das três personas, thresholds dos 4 parâmetros monitorados, restrições de resposta e 3 exemplos de few-shot prompting.
+Inclui contexto da missão MobilitySat, definição das três personas, thresholds dos 5 parâmetros monitorados, restrições de resposta e 3 exemplos de few-shot prompting.
 
 ## Cenários de teste demonstrados
 
